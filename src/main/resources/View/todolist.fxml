@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="760.0" prefWidth="912.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.todoController">
+   <children>
+      <Label layoutX="21.0" layoutY="245.0" text="Todo List :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="45.0" arcWidth="45.0" height="576.0" layoutX="373.0" layoutY="161.0" stroke="BLACK" strokeType="INSIDE" width="535.0" />
+      <Rectangle arcHeight="45.0" arcWidth="45.0" height="576.0" layoutX="14.0" layoutY="156.0" stroke="BLACK" strokeType="INSIDE" width="342.0" />
+      <JFXCheckBox fx:id="chckDone2" checkedColor="#12b42d" layoutX="21.0" layoutY="354.0" onAction="#chckDone2OnAction" prefHeight="18.0" prefWidth="36.0" unCheckedColor="WHITE" />
+      <JFXCheckBox fx:id="chckDone3" checkedColor="#12b42d" layoutX="21.0" layoutY="399.0" onAction="#chckDone3OnAction" prefHeight="18.0" prefWidth="36.0" unCheckedColor="WHITE" />
+      <JFXCheckBox fx:id="chckDone4" checkedColor="#12b42d" layoutX="21.0" layoutY="447.0" onAction="#chckDone4OnAction" prefHeight="18.0" prefWidth="36.0" unCheckedColor="WHITE" />
+      <JFXCheckBox fx:id="chckDone5" checkedColor="#12b42d" layoutX="21.0" layoutY="494.0" onAction="#chckDone5OnAction" prefHeight="18.0" prefWidth="36.0" unCheckedColor="WHITE" />
+      <JFXCheckBox fx:id="chckDone1" checkedColor="#12b42d" layoutX="21.0" layoutY="307.0" onAction="#chckDone1OnAction" prefHeight="18.0" prefWidth="36.0" unCheckedColor="WHITE" />
+      <Label layoutX="69.0" layoutY="172.0" text="tom cruise" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="69.0" layoutY="211.0" text="tomcruise@gmail.com" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblCompletedTask" layoutX="389.0" layoutY="307.0" prefHeight="326.0" prefWidth="502.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="66.4000244140625" text="Id" />
+            <TableColumn fx:id="colTitle" prefWidth="146.39987182617188" text="Title" />
+            <TableColumn fx:id="colDesc" prefWidth="171.2000732421875" text="Description" />
+            <TableColumn fx:id="colDate" prefWidth="117.60003662109375" text="Date" />
+        </columns>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TableView>
+      <TextArea fx:id="txtArea1" layoutX="47.0" layoutY="296.0" prefHeight="39.0" prefWidth="278.0" promptText="add task...." style="-fx-font-size: 14;" />
+      <TextArea fx:id="txtArea2" layoutX="47.0" layoutY="344.0" prefHeight="42.0" prefWidth="278.0" promptText="add task..." style="-fx-font-size: 14;" />
+      <TextArea fx:id="txtArea3" layoutX="47.0" layoutY="390.0" prefHeight="39.0" prefWidth="278.0" promptText="add task..." style="-fx-font-size: 14;" />
+      <TextArea fx:id="txtArea4" layoutX="47.0" layoutY="437.0" prefHeight="39.0" prefWidth="278.0" promptText="add task..." style="-fx-font-size: 14;" />
+      <TextArea fx:id="txtArea5" layoutX="47.0" layoutY="485.0" prefHeight="39.0" prefWidth="278.0" promptText="add task..." style="-fx-font-size: 14;" />
+      <DatePicker fx:id="txtDate" layoutX="45.0" layoutY="606.0" prefHeight="26.0" prefWidth="133.0" />
+      <TextField fx:id="txtAddTaskTitle" layoutX="180.0" layoutY="606.0" prefHeight="26.0" prefWidth="145.0" promptText="Title">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtAddTaskDesc" layoutX="45.0" layoutY="640.0" prefHeight="26.0" prefWidth="278.0" promptText="Discription">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btnAddTask" layoutX="118.0" layoutY="679.0" mnemonicParsing="false" onAction="#btnAddTaskOnAction" prefHeight="30.0" prefWidth="124.0" style="-fx-background-color: #3deb34;" text="Add Task">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnReload" layoutX="578.0" layoutY="658.0" mnemonicParsing="false" onAction="#btnReloadOnAction" prefHeight="30.0" prefWidth="124.0" style="-fx-background-color: #247bff;" text="Reload">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="70.0" fitWidth="97.0" layoutX="258.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/header%20Tom-Cruise-Val-Kilmer-Top-Gun-modified.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="25.0" height="132.0" layoutX="-3.0" layoutY="-19.0" stroke="BLACK" strokeType="INSIDE" width="915.0" />
+      <Label layoutX="239.0" layoutY="36.0" text="To-Do-List Dash Board" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="42.0" />
+         </font>
+      </Label>
+      <Label layoutX="402.0" layoutY="1.0" text="Welcome" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+      </Label>
+      <Label layoutX="463.0" layoutY="198.0" text="Completed Task" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="47.0" />
+         </font>
+      </Label>
+      <JFXCheckBox fx:id="chckDone51" checkedColor="#12b42d" layoutX="21.0" layoutY="548.0" onAction="#chckDone5OnAction" prefHeight="18.0" prefWidth="36.0" unCheckedColor="WHITE" />
+      <TextArea fx:id="txtArea51" layoutX="47.0" layoutY="535.0" prefHeight="39.0" prefWidth="278.0" promptText="add task..." style="-fx-font-size: 14;" />
+      <TextField fx:id="txtLiveDate" layoutX="811.0" layoutY="5.0" prefHeight="27.0" prefWidth="98.0" text="  ">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtLiveTime" layoutX="811.0" layoutY="34.0" prefHeight="27.0" prefWidth="98.0">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </TextField>
+      <JFXButton layoutX="816.0" layoutY="121.0" prefHeight="26.0" prefWidth="70.0" style="-fx-background-color: black;" text="Search" textFill="WHITE" />
+      <TextField layoutX="556.0" layoutY="122.0" prefHeight="26.0" prefWidth="246.0" style="-fx-background-color: black;" />
+   </children>
+</AnchorPane>
